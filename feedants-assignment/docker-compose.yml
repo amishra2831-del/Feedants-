@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: feedants-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - feedants_mongo_data:/data/db
+
+volumes:
+  feedants_mongo_data:
